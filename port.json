@@ -1,0 +1,29 @@
+{
+  "$schema": "https://living-code.dev/port.schema.json",
+  "schemaVersion": 1,
+  "name": "Claude Code",
+  "slug": "claude-code",
+  "group": "AI & Agents",
+  "emoji": "✳️",
+  "icon": "claudecode",
+  "description": "Living Code for Claude Code: prompt accents, permissions, messages, diffs and subagent colors in four native custom themes.",
+  "homepage": "https://code.claude.com",
+  "quick": "Install the native theme files",
+  "aliases": [
+    "claude",
+    "anthropic"
+  ],
+  "flavors": [
+    "night",
+    "frost",
+    "paper",
+    "signal"
+  ],
+  "files": [
+    "themes/living-code-night.json",
+    "themes/living-code-frost.json",
+    "themes/living-code-paper.json",
+    "themes/living-code-signal.json"
+  ],
+  "images": []
+}
