@@ -7,23 +7,39 @@
 
 ## Previews
 
-Real application screenshots have not been captured yet.
+<table data-lc-flavors>
+<tr>
+<td width="50%" valign="top">
+<strong>Night</strong><br><sub>Dark · full palette</sub><br><br>
+<a href="images/night.png"><img src="images/night.png" alt="Claude Code running Living Code Night" width="640"></a>
+</td>
+<td width="50%" valign="top">
+<strong>Frost</strong><br><sub>Dark · softer chroma</sub><br><br>
+<a href="images/frost.png"><img src="images/frost.png" alt="Claude Code running Living Code Frost" width="640"></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<strong>Paper</strong><br><sub>Light · near-white slate</sub><br><br>
+<a href="images/paper.png"><img src="images/paper.png" alt="Claude Code running Living Code Paper" width="640"></a>
+</td>
+<td width="50%" valign="top">
+<strong>Signal</strong><br><sub>Dark · teal accent</sub><br><br>
+<a href="images/signal.png"><img src="images/signal.png" alt="Claude Code running Living Code Signal" width="640"></a>
+</td>
+</tr>
+</table>
+
+Select any preview to view the image at full size.
 
 ## Installation
 
 ```sh
-git clone https://github.com/living-code-theme/claude-code.git
-cd claude-code
+flavor=night # night, frost, paper, or signal
+curl -fsSL --create-dirs -o "${CLAUDE_CONFIG_DIR:-$HOME/.claude}/themes/living-code-$flavor.json" "https://raw.githubusercontent.com/living-code-theme/claude-code/main/themes/living-code-$flavor.json"
 ```
 
-Install in a version of Claude Code whose `/theme` menu includes **New custom theme…**. Copy the JSON files into the personal theme directory:
-
-```sh
-mkdir -p "$HOME/.claude/themes"
-cp themes/*.json "$HOME/.claude/themes/"
-```
-
-Restart Claude Code once if that directory did not exist when it started. Run `/theme` and select **Living Code Night**. Later changes hot-reload.
+Run `/theme` and select **Living Code Night** (or the flavor you downloaded). Restart Claude Code once if the theme directory did not exist when it started. Later edits hot-reload. This respects `CLAUDE_CONFIG_DIR` when set; no existing settings file is overwritten.
 
 ## Flavors
 
@@ -32,7 +48,7 @@ Expand a flavor for its full-size preview and activation instructions.
 <details data-lc-flavor="night">
 <summary><strong>Night</strong> · Dark · full palette</summary>
 
-A real application capture is not available yet.
+<p><a href="images/night.png"><img src="images/night.png" alt="Claude Code running Living Code Night" width="1280"></a></p>
 
 Run `/theme` and select **Living Code Night**. Its stored preference is `custom:living-code-night`.
 
@@ -41,7 +57,7 @@ Run `/theme` and select **Living Code Night**. Its stored preference is `custom:
 <details data-lc-flavor="frost">
 <summary><strong>Frost</strong> · Dark · softer chroma</summary>
 
-A real application capture is not available yet.
+<p><a href="images/frost.png"><img src="images/frost.png" alt="Claude Code running Living Code Frost" width="1280"></a></p>
 
 Run `/theme` and select **Living Code Frost**. Its stored preference is `custom:living-code-frost`.
 
@@ -50,7 +66,7 @@ Run `/theme` and select **Living Code Frost**. Its stored preference is `custom:
 <details data-lc-flavor="paper">
 <summary><strong>Paper</strong> · Light · near-white slate</summary>
 
-A real application capture is not available yet.
+<p><a href="images/paper.png"><img src="images/paper.png" alt="Claude Code running Living Code Paper" width="1280"></a></p>
 
 Run `/theme` and select **Living Code Paper**. Its stored preference is `custom:living-code-paper`.
 
@@ -59,7 +75,7 @@ Run `/theme` and select **Living Code Paper**. Its stored preference is `custom:
 <details data-lc-flavor="signal">
 <summary><strong>Signal</strong> · Dark · teal accent</summary>
 
-A real application capture is not available yet.
+<p><a href="images/signal.png"><img src="images/signal.png" alt="Claude Code running Living Code Signal" width="1280"></a></p>
 
 Run `/theme` and select **Living Code Signal**. Its stored preference is `custom:living-code-signal`.
 
@@ -71,7 +87,9 @@ The files contain a display `name`, a `base` preset and documented `overrides`. 
 
 ## Compatibility
 
-Targets the custom-theme JSON API documented in the [Claude Code terminal configuration reference](https://code.claude.com/docs/en/terminal-config#create-a-custom-theme). This is not a status-line workaround or a patched Claude binary. Old versions with only built-in presets need an update. The `effortUltra` override requires Claude Code 2.1.239 or later; older versions ignore unknown tokens. Fullscreen-only surfaces apply only in fullscreen mode. Tests validate the documented token contract; a full interactive visual capture is not included.
+Targets the custom-theme JSON API documented in the [Claude Code terminal configuration reference](https://code.claude.com/docs/en/terminal-config#create-a-custom-theme). This is not a status-line workaround or a patched Claude binary. Old versions with only built-in presets need an update. The `effortUltra` override requires Claude Code 2.1.239 or later; older versions ignore unknown tokens. Fullscreen-only surfaces apply only in fullscreen mode. Tests validate the documented token contract; the screenshots show the real custom-theme picker and its native preview.
+
+Previews are captured programmatically from the actual application in an isolated profile. See [`capture/app.py`](capture/app.py) for the app-owned recipe and [`images/capture.json`](images/capture.json) for runtime, palette and image provenance. No mock interface is drawn.
 
 ## Contributing
 

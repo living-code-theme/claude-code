@@ -25,5 +25,10 @@
     "themes/living-code-paper.json",
     "themes/living-code-signal.json"
   ],
-  "images": []
+  "images": [
+    { "flavor": "night", "path": "images/night.png", "alt": "Claude Code running Living Code Night" },
+    { "flavor": "frost", "path": "images/frost.png", "alt": "Claude Code running Living Code Frost" },
+    { "flavor": "paper", "path": "images/paper.png", "alt": "Claude Code running Living Code Paper" },
+    { "flavor": "signal", "path": "images/signal.png", "alt": "Claude Code running Living Code Signal" }
+  ]
 }

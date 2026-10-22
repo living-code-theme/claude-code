@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "scene": "Claude Code native custom-theme picker and its built-in syntax preview. No model request.",
+  "versionCommand": [
+    "claude",
+    "--version"
+  ],
+  "fixtures": []
+}
