@@ -100,9 +100,11 @@ The files contain a display `name`, a `base` preset and documented `overrides`. 
 
 ## Compatibility
 
-Targets the custom-theme JSON API documented in the [Claude Code terminal configuration reference](https://code.claude.com/docs/en/terminal-config#create-a-custom-theme). This is not a status-line workaround or a patched Claude binary. Old versions with only built-in presets need an update. The `effortUltra` override requires Claude Code 2.1.239 or later; older versions ignore unknown tokens. Fullscreen-only surfaces apply only in fullscreen mode. Tests validate the documented token contract; the screenshots show the real custom-theme picker and its native preview.
+Targets the custom-theme JSON API documented in the [Claude Code terminal configuration reference](https://code.claude.com/docs/en/terminal-config#create-a-custom-theme). This is not a status-line workaround or a patched Claude binary. Old versions with only built-in presets need an update. The `effortUltra` override requires Claude Code 2.1.239 or later; older versions ignore unknown tokens. Fullscreen-only surfaces apply only in fullscreen mode. Tests validate the documented UI token contract; screenshots show the real application, including its native highlighting.
 
-Previews are captured programmatically from the actual application in an isolated profile. See [`capture/app.py`](capture/app.py) for the app-owned recipe and [`images/capture.json`](images/capture.json) for runtime, palette and image provenance. No mock interface is drawn.
+**Syntax limitation (Claude Code 2.1.296):** custom themes do not expose syntax-role overrides. Native syntax palettes are selected by the application rather than through the UI overrides; for example, the diff highlighter chooses hard-coded Monokai/GitHub/ANSI colors from the base preset. This port therefore cannot promise Neovim-matched code colors in stock Claude Code. Exact parity needs an upstream syntax-theme API; no binary patch, terminal-output recoloring or screenshot-only substitution is applied.
+
+Previews are captured programmatically from the actual application in an isolated profile. See [`capture/app.py`](capture/app.py) for the app-owned recipe and [`images/capture.json`](images/capture.json) for runtime, palette and image provenance. No mock interface is drawn. The conversation is a labeled, repository-owned local demo, not a private session or a live model response. Recapturing needs no account, subscription or paid API call.
 
 ## Contributing
 

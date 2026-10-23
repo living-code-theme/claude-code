@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "scene": "Claude Code native custom-theme picker and its built-in syntax preview. No model request.",
+  "scene": "Claude Code native conversation and syntax highlighting, resuming a labeled local code-review demo. No model request or user credentials.",
   "versionCommand": [
     "claude",
     "--version"
   ],
-  "fixtures": []
+  "fixtures": ["capture/review.md"]
 }

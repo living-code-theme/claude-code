@@ -1,14 +1,15 @@
 {
   "schemaVersion": 1,
-  "scene": "Claude Code native custom-theme picker and its built-in syntax preview. No model request.",
+  "scene": "Claude Code native conversation and syntax highlighting, resuming a labeled local code-review demo. No model request or user credentials.",
   "inputs": {
-    "capture/app.py": "8d0194a09359b5053fa5ba4d793ea604fa91fbb9aec8f652a7efad677829f8a5",
-    "capture/config.json": "a0d35620969039898d134e8f4bb4306046a1f8408b4d0bac0ddc9709b7704b71",
+    "capture/app.py": "a1ceb2259d411278e8ea2a5b52bf5a79f951ddd66541d6be37c2097f91a14cf3",
+    "capture/config.json": "7aa1c74f12de40dcef1420a92f82e4eff09602541be6e9db35d81d4becbc6dca",
     "capture/flake.lock": "e3750f7ba25d0b1971722cdd83b2f07e32528980a4d6a9a1ea55177747de5752",
-    "capture/flake.nix": "b84b66c270e6c7a90d7f4c121aded28737e3e926a29180351209d51358831110",
+    "capture/flake.nix": "7dc5a0379067bd7fa864ec802efadb97415845240d8164a4bb3659751f702db4",
+    "capture/review.md": "eab4a3ae509f01d72a9370f877cb7d69ceeb5418ad23645f465d9182d47f41ab",
     "palette/theme.json": "d735cf005e3b2807953226c0119e384f6f8a3d2b3167443371cb302a8c689cdb",
     "port.json": "980b1918574d04ecb2e40b7079978864d5a1d163670866d41b94c18e058b8747",
-    "scripts/capture.py": "1fefb763f00567b795b92388b29e3e8c3fd58bd0eefa9c2f31e43663cad7a308",
+    "scripts/capture.py": "ea56b3784525095d9175887431004ce5df674f17b45c7e5a8d0399aa68615c33",
     "themes/living-code-frost.json": "6f09b3355241d8623dbee779112c413fb7e417ef36abb43a0bdcc0ba8ea30d1e",
     "themes/living-code-night.json": "990655aa28a4a3a42c2db50fed04df1df042f08cf9d86c6634800ae285faf155",
     "themes/living-code-paper.json": "6c0be3130ff10f43ea7f741eb361e19202d105d7542f0f8d85a525144c72df0e",
@@ -17,35 +18,39 @@
   "images": {
     "night": {
       "path": "images/night.png",
-      "sha256": "72665824f0b71e9f3df3ca4f43b3568da8e56e1f71bcd0b8922fb6f5e493bce0",
+      "sha256": "82c7eeb08bba8930a673c5ff7a28c696321f90ca1f19820f0b3b779d8c5fd1e7",
       "application": "2.1.296 (Claude Code)",
       "paletteColors": [
         "#00a692",
         "#05080b",
-        "#747c80",
+        "#090e11",
         "#80b6d3",
         "#8acb83",
         "#9ba0a2",
-        "#e2e9ee"
+        "#e2e9ee",
+        "#e96560",
+        "#f0be6d"
       ]
     },
     "frost": {
       "path": "images/frost.png",
-      "sha256": "c9af817805a61982b7c62a8d4fc926e0596ebf0856e30bf74f7df64a1f7350ec",
+      "sha256": "c3c01f84c18040b6bb5c16e054684f26963193b092a79a0a04ac9e43e8542da8",
       "application": "2.1.296 (Claude Code)",
       "paletteColors": [
         "#0a1016",
+        "#10171c",
         "#43a997",
-        "#7d8489",
         "#98bacd",
         "#9ba0a2",
         "#a2cb9d",
-        "#e2e9ee"
+        "#d68079",
+        "#e2e9ee",
+        "#e9c897"
       ]
     },
     "paper": {
       "path": "images/paper.png",
-      "sha256": "088c212ef71741e486d98ecc765f16f59eb6cc9fa61fcf2c8ddac387374eef20",
+      "sha256": "3ea7d668e3d221d8dce5815eb37d3d5c506903223359075203126a454ba3e960",
       "application": "2.1.296 (Claude Code)",
       "paletteColors": [
         "#12171a",
@@ -53,19 +58,20 @@
         "#2b6991",
         "#3b7a35",
         "#50565a",
-        "#6b7378",
+        "#8f6213",
+        "#a74541",
         "#ebeff2",
         "#f4f7f9"
       ]
     },
     "signal": {
       "path": "images/signal.png",
-      "sha256": "41fd7ce4185f094704ecaaa09610acf19c4191588f11680bc2b6a1c94256ade8",
+      "sha256": "989f77c787b527f3c3cfde54e2ef35aed500d1de2dae3e3341baf673afe87ffd",
       "application": "2.1.296 (Claude Code)",
       "paletteColors": [
         "#00a692",
         "#05080b",
-        "#747c80",
+        "#090e11",
         "#9ba0a2",
         "#c8cfd4",
         "#e2e9ee"
