@@ -1,7 +1,7 @@
 {
   "url": "https://code.claude.com/docs/en/terminal-config.md",
-  "sha256": "cd074c187046f3b66cbaf3130c940035a5c39f251800a7c8cda4bb99632862ca",
-  "checked": "2026-10-21",
+  "sha256": "6583cce3568612966bb50c24d39a9ee7412795cdcaf8c6cce7d47e50e8310a9a",
+  "checked": "2026-11-26",
   "contract": "json",
   "allowed": [
     "claude",
